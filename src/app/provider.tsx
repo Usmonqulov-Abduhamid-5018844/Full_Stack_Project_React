@@ -3,7 +3,7 @@ import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 import { store } from "./store";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import Loading from "../features/loading"
+import Loading from "../features/loading";
 
 const client = new QueryClient();
 

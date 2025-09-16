@@ -35,9 +35,9 @@ export const DoctorView: FC<DoctorProps> = memo(({ data }) => {
   return (
     <div className="DoctorView p-5">
       {data?.data?.map((item: Doctor) => (
-        <div key={item.id} className="flex border-1 border-amber-300 shadow-blue-100 rounded-2xl my-5 gap-6 p-3">
+        <div key={item.id} className="flex border-2 border-gray-200 shadow-blue-100 rounded-2xl my-5 gap-6 p-3">
           <div className="my-auto w-[70px] h-[70px] overflow-hidden rounded-[5px]">
-            <img className="w-full h-full object-cover" src={item.image} alt={"image"} />
+            <img className="w-full h-full object-cover object-right" src={item.image} alt={"image"} />
           </div>
           <div className="flex-1 flex-col my-auto">
             <div className="flex font-bold gap-1 mb-2">
@@ -62,14 +62,14 @@ export const DoctorView: FC<DoctorProps> = memo(({ data }) => {
            </div>
           </div>
           <div className="flex flex-col gap-2 py-2">
-            <button className="border px-3 py-2 rounded-[10px] bg-blue-500 text-white">
+            <button className=" px-3 py-2 rounded-[10px] bg-blue-500 text-white">
               <span className="font-bold">View Appointments</span>
             </button>
-            <button  className="border px-3 py-2 rounded-[10px]">
               <Link to={`/doctor/${item.id}`}>
+            <button  className="border-2 border-gray-200 px-3 py-2 rounded-[10px] w-full">
              <span className="font-bold text-[#384052]">Batafsil</span>
-              </Link>
             </button>
+              </Link>
           </div>
         </div>
       ))}

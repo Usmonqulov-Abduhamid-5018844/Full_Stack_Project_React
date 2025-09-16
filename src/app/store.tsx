@@ -1,8 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
+import authSlice  from './fakes/authSlice'
 
 export const store = configureStore({
   reducer: {
-    fake: () => "qovun"
+    authSlice
   },
 })
 

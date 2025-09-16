@@ -1,8 +1,1 @@
 @import "tailwindcss";
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-@theme {
-  --color-py: #121063;
-  --color-sy: #3ab7bf;
-}

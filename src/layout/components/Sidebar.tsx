@@ -92,14 +92,12 @@ const Sidebar = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink
-          className={({isActive}) => `block p-2 mb-2 rounded-md ${isActive ? "bg-white text-slate-900": ""}`}
-           to={"chiqish"}>
+          <button className="block p-2 w-[100%] mb-2 rounded-md text-white  hover:bg-white hover:text-slate-900">
             <div className="flex gap-2">
               <img src={logOut} alt="" />
               <span>Chiqish</span>
             </div>
-          </NavLink>
+          </button>
         </li>
       </ul>
     </div>

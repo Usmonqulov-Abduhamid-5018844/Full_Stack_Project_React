@@ -1,5 +1,6 @@
 import { memo } from 'react';
 
+
 const Statistic = () => {
   return (
     <div className="Statistic">
