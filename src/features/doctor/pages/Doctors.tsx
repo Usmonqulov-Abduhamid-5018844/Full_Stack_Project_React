@@ -5,8 +5,8 @@ import filter from "../../../shared/assets/filter-funnel-01.svg";
 import { IoIosSearch } from "react-icons/io";
 
 const Doctors = () => {
-  const { getDoctors } = useDoctor();
-  const { data } = getDoctors();
+  const { getFinished } = useDoctor();
+  const { data } = getFinished();
 
   return (
     <div className="Doctors">

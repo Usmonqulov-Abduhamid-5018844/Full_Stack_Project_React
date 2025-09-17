@@ -3,7 +3,7 @@ import { useRoutes } from "react-router-dom";
 import Auth from "../features/auth";
 
 const Login = lazy(() => import("../features/login"));
-const Arizalar = lazy(() => import("../features/arizalar/page/arizalar"));
+const Arizalar = lazy(() => import("../features/application/pages"));
 const DashboardLayout = lazy(() => import("../layout/DashboardLayout"));
 const Statistic = lazy(() => import("../features/statistic/pages/Statistic"));
 const Doctors = lazy(() => import("../features/doctor/pages/Doctors"));
