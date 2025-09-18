@@ -2,7 +2,7 @@ import React, { memo, useState } from "react";
 import { useLogin } from "./service/login";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { setToken } from "../../app/fakes/authSlice";
+import { setToken } from "../doctor/store/authSlice";
 import Doctor from "../../shared/assets/doctorFile/Frame 206.png";
 import Logo from "../../shared/assets/doctorFile/Logo wrap.png";
 
