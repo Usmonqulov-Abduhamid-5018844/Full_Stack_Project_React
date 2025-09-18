@@ -1,6 +1,5 @@
 import { memo, useState, type FC } from "react";
 import type { Doctor, DoctorProps } from "../types";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import { useDoctorStatus } from "../services/useDoctor";
 import Popap from "../pages/popap";
 
@@ -141,23 +140,6 @@ const Appointments: FC<DoctorProps> = ({ data }) => {
             </div>
           ))}
         </div>
-      </div>
-      <div className="border w-[95%] mb-6 mx-auto rounded-[8px] py-4 flex justify-between px-5 mt-10 border-gray-200">
-        <button className="border-2 border-gray-200 py-1 hover:bg-blue-400 hover:font-bold hover:text-white px-3 rounded-[8px] flex items-center font-bold">
-          <GoArrowLeft className="w-5 h-5 mr-1" /> Previous
-        </button>
-        <div className="flex gap-10">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-          <span>...</span>
-          <span>8</span>
-          <span>9</span>
-          <span>10</span>
-        </div>
-        <button className="border-2 hover:bg-blue-400 hover:font-bold hover:text-white border-gray-200 py-1 px-3 rounded-[8px] flex items-center font-bold">
-          Next <GoArrowRight className="w-5 h-5 ml-1" />
-        </button>
       </div>
       {onClose && <Popap setClose={setClose} data={selectorItem} />}
     </div>

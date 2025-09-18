@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useQuery } from "@tanstack/react-query";
 import { memo, useEffect } from "react";
 import { api } from "../shared/api";
-import { removeToken } from "../app/fakes/authSlice";
+import { removeToken } from "../features/doctor/store/authSlice";
 import type { RootState } from "../app/store";
 import Sidebar from "./components/Sidebar";
 import Loading from "../features/loading";
