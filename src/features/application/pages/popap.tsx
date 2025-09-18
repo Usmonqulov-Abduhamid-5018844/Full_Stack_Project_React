@@ -12,9 +12,14 @@ const Popap: FC<Props> = ({ setClose, data }) => {
   const { getStatus } = useDoctorStatus();
 
   return (
-    <div onClick={()=> setClose(false)} className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-      <div onClick={(e)=> e.stopPropagation()} className="w-[600px] max-h-[90vh] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
-
+    <div
+      onClick={() => setClose(false)}
+      className="fixed inset-0 bg-black/40 flex items-center justify-center z-50"
+    >
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="w-[600px] max-h-[90vh] bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col"
+      >
         <div className="flex items-center justify-between px-5 py-3 border-b-2 border-gray-200">
           <h2 className="font-bold text-lg">#{data.id} arizani tekshirish</h2>
           <button onClick={() => setClose((p) => !p)}>
@@ -57,7 +62,22 @@ const Popap: FC<Props> = ({ setClose, data }) => {
             />
           </div>
           <div>
-            <h3 className="font-bold mb-2">Hujjatlar [5]</h3>
+            <h3 className="font-bold mb-2">
+              Hujjatlar [
+              {data.Doctor_file.reduce((acc, doc) => {
+                return (
+                  acc +
+                  [
+                    doc.diplom_file,
+                    doc.passport_file,
+                    doc.yatt_file,
+                    doc.sertifikat_file,
+                    doc.tibiy_varaqa_file,
+                  ].filter(Boolean).length
+                );
+              }, 0)}
+              ]
+            </h3>
             <ul className="space-y-3">
               <li className="flex justify-between items-center border-1 border-gray-200 rounded-lg px-3 py-2 hover:bg-gray-50">
                 <div className="flex items-center gap-3">
@@ -65,17 +85,19 @@ const Popap: FC<Props> = ({ setClose, data }) => {
                   <div>
                     <p className="text-sm text-gray-500">Passport fotosutati</p>
                     <span className="font-mono text-sm font-bold block w-[430px] truncate ">
-                      {data.Doctor_file[0].passport_file}
+                      {data.Doctor_file[0]?.passport_file || "Yuklanmagan"}
                     </span>
                   </div>
                 </div>
-                <a
-                  target="_blank"
-                  href={data.Doctor_file[0]?.passport_file}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaRegEye className="text-[22px]" />
-                </a>
+                {data?.Doctor_file[0]?.passport_file && (
+                  <a
+                    target="_blank"
+                    href={data.Doctor_file[0]?.passport_file}
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <FaRegEye className="text-[22px]" />
+                  </a>
+                )}
               </li>
               <li className="flex justify-between items-center border-1 border-gray-200 rounded-lg px-3 py-2 hover:bg-gray-50">
                 <div className="flex items-center gap-3">
@@ -85,17 +107,19 @@ const Popap: FC<Props> = ({ setClose, data }) => {
                       Diplom (Bakalavr va mutaxassislik)
                     </p>
                     <span className="font-mono text-sm font-bold block w-[430px] truncate ">
-                      {data.Doctor_file[0].diplom_file}
+                      {data.Doctor_file[0]?.diplom_file || "Yuklanmagan"}
                     </span>
                   </div>
                 </div>
-                <a
-                  target="_blank"
-                  href={data.Doctor_file[0]?.diplom_file}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaRegEye className="text-[22px]" />
-                </a>
+                {data?.Doctor_file[0]?.diplom_file && (
+                  <a
+                    target="_blank"
+                    href={data.Doctor_file[0]?.diplom_file}
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <FaRegEye className="text-[22px]" />
+                  </a>
+                )}
               </li>
               <li className="flex justify-between items-center border-1 border-gray-200 rounded-lg px-3 py-2 hover:bg-gray-50">
                 <div className="flex items-center gap-3">
@@ -105,17 +129,19 @@ const Popap: FC<Props> = ({ setClose, data }) => {
                       O'z-o'zini band qilish
                     </p>
                     <span className="font-mono text-sm font-bold block w-[430px] truncate ">
-                      {data.Doctor_file[0].yatt_file}
+                      {data.Doctor_file[0]?.yatt_file || "Yuklanmagan"}
                     </span>
                   </div>
                 </div>
-                <a
-                  target="_blank"
-                  href={data.Doctor_file[0]?.yatt_file}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaRegEye className="text-[22px]" />
-                </a>
+                {data?.Doctor_file[0]?.yatt_file && (
+                  <a
+                    target="_blank"
+                    href={data.Doctor_file[0]?.yatt_file}
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <FaRegEye className="text-[22px]" />
+                  </a>
+                )}
               </li>
               <li className="flex justify-between items-center border-1 border-gray-200 rounded-lg px-3 py-2 hover:bg-gray-50">
                 <div className="flex items-center gap-3">
@@ -123,17 +149,19 @@ const Popap: FC<Props> = ({ setClose, data }) => {
                   <div>
                     <p className="text-sm text-gray-500">Sertifikat</p>
                     <span className="font-mono text-sm font-bold block w-[430px] truncate ">
-                      {data.Doctor_file[0].sertifikat_file}
+                      {data.Doctor_file[0]?.sertifikat_file || "Yuklanmagan"}
                     </span>
                   </div>
                 </div>
-                <a
-                  target="_blank"
-                  href={data.Doctor_file[0]?.sertifikat_file}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaRegEye className="text-[22px]" />
-                </a>
+                {data.Doctor_file[0]?.sertifikat_file && (
+                  <a
+                    target="_blank"
+                    href={data.Doctor_file[0]?.sertifikat_file}
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <FaRegEye className="text-[22px]" />
+                  </a>
+                )}
               </li>
               <li className="flex justify-between items-center border-1 border-gray-200 rounded-lg px-3 py-2 hover:bg-gray-50">
                 <div className="flex items-center gap-3">
@@ -141,17 +169,19 @@ const Popap: FC<Props> = ({ setClose, data }) => {
                   <div>
                     <p className="text-sm text-gray-500">Shaxsiy tibbiy</p>
                     <span className="font-mono text-sm font-bold block w-[430px] truncate ">
-                      {data.Doctor_file[0].tibiy_varaqa_file}
+                      {data.Doctor_file[0]?.tibiy_varaqa_file || "Yuklanmagan"}
                     </span>
                   </div>
                 </div>
-                <a
-                  target="_blank"
-                  href={data.Doctor_file[0]?.tibiy_varaqa_file}
-                  className="text-blue-600 hover:text-blue-800"
-                >
-                  <FaRegEye className="text-[22px]" />
-                </a>
+                {data.Doctor_file[0]?.tibiy_varaqa_file && (
+                  <a
+                    target="_blank"
+                    href={data.Doctor_file[0]?.tibiy_varaqa_file}
+                    className="text-blue-600 hover:text-blue-800"
+                  >
+                    <FaRegEye className="text-[22px]" />
+                  </a>
+                )}
               </li>
             </ul>
           </div>
@@ -161,7 +191,7 @@ const Popap: FC<Props> = ({ setClose, data }) => {
           <div className="flex gap-10 mx-auto">
             <button
               onClick={() => {
-                getStatus.mutate({ id: data.id, body: {status: "block"} });
+                getStatus.mutate({ id: data.id, body: { status: "block" } });
                 setClose((p) => !p);
               }}
               className="bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-600"
@@ -170,7 +200,7 @@ const Popap: FC<Props> = ({ setClose, data }) => {
             </button>
             <button
               onClick={() => {
-                getStatus.mutate({ id: data.id, body: {status: "finish"} });
+                getStatus.mutate({ id: data.id, body: { status: "finish" } });
                 setClose((p) => !p);
               }}
               className="bg-indigo-900 text-white px-4 py-2 rounded-md hover:bg-indigo-800"

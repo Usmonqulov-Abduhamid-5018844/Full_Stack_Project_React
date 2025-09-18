@@ -8,6 +8,8 @@ const Appointments: FC<DoctorProps> = ({ data }) => {
   const [onClose, setClose] = useState(false);
   const [selectorItem, setSelectorItem] = useState<any>(null);
 
+
+
   return (
     <div className="container mx-auto">
       <div className="border mx-auto w-[95%] mt-6 rounded-2xl border-gray-200">
@@ -101,13 +103,14 @@ const Appointments: FC<DoctorProps> = ({ data }) => {
               <div className="flex gap-3">
                 <button
                   onClick={() => {
-                    setClose((p) => !p);
                     setSelectorItem(item);
+                    setClose((p) => !p);
                   }}
                   className="text-blue-600 px-1 cursor-pointer hover:bg-blue-500 rounded-[10px] hover:text-white"
                 >
                   Tekshirish
                 </button>
+
                 {item.step !== "block" && (
                   <button
                     disabled={getStatus.isPending}
