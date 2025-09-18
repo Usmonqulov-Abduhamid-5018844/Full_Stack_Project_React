@@ -1,7 +1,6 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { useRoutes } from "react-router-dom";
 import Auth from "../features/auth";
-import Loading from "../features/application/pages/loading";
 
 const Login = lazy(() => import("../features/login"));
 const Arizalar = lazy(() => import("../features/application/pages"));
@@ -24,14 +23,7 @@ export const AppRouter = () => {
             { path: "/", element: <Statistic /> },
             { path: "doctors", element: <Doctors /> },
             { path: "doctor/:id", element: <DoctorDtels /> },
-            {
-              path: "ariza",
-              element: (
-                <Suspense fallback={<Loading/>}>
-                  <Arizalar />
-                </Suspense>
-              ),
-            },
+            { path: "ariza", element: <Arizalar /> },
             { path: "bemor", element: <Bemorlar /> },
             { path: "admin", element: <Adminlar /> },
             { path: "sozlamalar", element: <Sozlamalar /> },

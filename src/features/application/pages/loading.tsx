@@ -1,66 +1,107 @@
 import { memo } from "react";
-import { IoIosSearch } from "react-icons/io";
 
 const LoadingArizalar = () => {
   return (
-    <div className="container mx-auto">
-      <div className="flex mt-10 justify-between w-[95%] mx-auto">
-        <div>
-          <span className="text-2xl font-bold">Arizalar</span>
-          <p>
-            <b className="font-bold">Shoving:</b> All Consultations of All
-            Healthcare Providers
-          </p>
+    <div className="border border-gray-200 mt-5">
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-
-        <form
-          className="w-[350px] border-2 rounded-[7px] gap-3 flex items-center border-gray-300 overflow-hidden my-auto mr-2"
-          action=""
-        >
-          <input className="w-[85%] outline-none indent-3 py-2" type="text" />
-          <IoIosSearch className="text-3xl" />
-        </form>
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
       </div>
-      <div className="border border-gray-200 mt-5">
-        <div className="flex items-center gap-4 px-4 mt-4">
-          <span className="text-2xl">Arizalar</span>
-          <span className="text-blue-600 font-bold">{10}</span>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 h-11 bg-gray-100 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
+      </div>
+      <div className="border border-gray-200 mt-5 rounded-lg shadow-sm">
+        <div className="w-full border-gray-200 border-b-2 h-12 flex items-center justify-center">
+          <div className="w-[94%] h-2 bg-gray-200 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 animate-[loading_1.5s_linear_infinite]"></div>
+          </div>
         </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-        <div className="w-full border-gray-200 border-b-2 h-11 border ">
-        </div>
-
+        <p className="text-center text-gray-500 text-sm py-2 animate-pulse">
+          Loading...
+        </p>
       </div>
     </div>
   );
