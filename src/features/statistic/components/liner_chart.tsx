@@ -50,6 +50,12 @@ export const data = {
       borderColor: 'rgb(53, 162, 235)',
       backgroundColor: 'rgba(53, 162, 235, 0.5)',
     },
+    {
+      label: 'Dataset 3',
+      data: labels.map(() => Math.floor(Math.random() * 100)),
+      borderColor: 'rgb(53, 162, 235)',
+      backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    },
   ],
 };
 
